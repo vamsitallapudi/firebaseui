@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Movie Board</string>
+    <string name="movie_name_hint">Enter Movie Name</string>
+</resources>
