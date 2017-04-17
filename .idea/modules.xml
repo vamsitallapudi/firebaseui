@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FirebaseDatabaseExample.iml" filepath="$PROJECT_DIR$/FirebaseDatabaseExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firebaseui.iml" filepath="$PROJECT_DIR$/firebaseui.iml" />
     </modules>
   </component>
 </project>
