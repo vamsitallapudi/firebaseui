@@ -11,7 +11,6 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.coderefer.firebasedatabaseexample.fragments.AddMovieFragment;
 import com.coderefer.firebasedatabaseexample.models.Movie;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference mDatabaseReference = database.getReference();
 
-    private static final String userId = "53";
+    private static final String USER_ID = "53";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         }
         //using staggered grid pattern in recyclerview
         mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        mLayoutManager.setReverseLayout(true);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
 
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.movie_board_item,
                 MovieViewHolder.class,
                 //referencing the node where we want the database to store the data from our Object
-                mDatabaseReference.child("users").child(userId).child("movies").getRef()
+                mDatabaseReference.child("users").child(USER_ID).child("movies").getRef()
         ) {
             @Override
             protected void populateViewHolder(MovieViewHolder viewHolder, Movie model, int position) {
